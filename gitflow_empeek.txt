@@ -1,0 +1,23 @@
+Connecting to the repository (when working on a new host)
+git init //initialize local repository, does only once in the new working directory
+git clone %URL% //where %URL% is the URI of the remote repository on the "GitHub" you wish to download
+
+Pulling last changes from remote to local repository (you should pull the latest changes to the local "master" branch, so we will switch to the master first)
+git fetch //load the latest info (about branches and changes) from GitHub to your Git
+git checkout master //switching to the local master branch
+git status //check if your code is up to date with the remote origin/master branch
+git pull //downloading the latest changes from the remote origin/master branch to your local master branch
+
+How to work with files when you have the latest code on your local master branch
+git checkout -b %newBranchName% //creating and switching to the new branch with %newBranchName% (don't worry, it will save all your latest changes from the local master branch)
+*Now you can safely change any files, any code, develop new features, e.t.c.*
+
+How to push your changes from the local branch to remote branch (and create the remote branch with the changes)
+git status //to see which files were changed, added, deleted on your local branch
+git add . //add ALL changed files to the next commit body
+git commit -m "Commit Name" //create new "ready for push" commit with your changes
+git push //push the latest changes to the remote branch (if remote branch with the name of your %activeLocalBranch% is absent - git will advise you the command how to create it and push to it immediately
+*after this you should open GitHub and merge the pull request from the remote branch to the "origin/master"*
+
+How to pull changes from certain remote branch
+git checkout --track origin/%branch_name% //create a branch (with the similar name of the remote branch) and connect it with the remote branch
