@@ -17,9 +17,10 @@ git status //to see which files were changed, added, deleted on your local branc
 git add . //add ALL changed files to the next commit body
 git commit -m "Commit Name" //create new "ready for push" commit with your changes
 git push //push the latest changes to the remote branch (if remote branch with the name of your %activeLocalBranch% is absent - git will advise you the command how to create it and push to it immediately
-*after this you should open GitHub and merge the pull request from the remote branch to the "origin/master"*
+*after this you should open GitHub, create, and anmerge the pull request from the remote branch to the "origin/master"*
 **OR:** git checkout master //to switch to the master branch
 		git merge %branchWithChangesName% //to merge changes from the %branchWithChangesName% to master
 
 How to pull changes from certain remote branch
 git checkout --track origin/%branch_name% //create a branch (with the similar name of the remote branch) and connect it with the remote branch
+**OR:** git checkout -b %newLocalBranchName% origin/%remoteBranchName% //pull changes from the %remoteBranchName% to the %newLocalBranchName%
