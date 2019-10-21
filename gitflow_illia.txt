@@ -24,3 +24,6 @@ git push //push the latest changes to the remote branch (if remote branch with t
 How to pull changes from certain remote branch
 git checkout --track origin/%branch_name% //create a branch (with the similar name of the remote branch) and connect it with the remote branch
 **OR:** git checkout -b %newLocalBranchName% origin/%remoteBranchName% //pull changes from the %remoteBranchName% to the %newLocalBranchName%
+
+How to rename a file:
+git mv %oldFileName.extension% %newFileName.extension%
