@@ -31,3 +31,5 @@ git mv %oldFileName.extension% %newFileName.extension%
 How to delete local and remote branches:
 Local: git branch -d %branch_name% //deletes local branch
 Remote: git push origin --delete %branch_name% //deletes remote branch
+ 
+//
